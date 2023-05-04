@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Shapes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Shapes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Въведение</a></li>
+            <li><a href="#how">Kaк да създадем форма със CSS?</a></li>
+            
+            <ul>
+                <li><a href="#properties">Важни свойства</a></li>
+                <li><a href="#br">Border-radius</a></li>
+                <li><a href="#floatar">Float area</a></li>
+                <li><a href="#wrap">Wrap</a></li>
+            </ul>
+            
+            <li><a href="#module">CSS Shapes Module</a></li>
+            
+            <ul>
+                <li><a href="#level1">CSS Shapes Level 1</a></li>
+                <li><a href="#level2">CSS Shapes Level 2</a></li>
+            </ul>
+            
+            <li><a href="#types">Видове форми</a></li>
+            
+            <ul>
+                <li><a href="#t1">Основни форми:</a></li>
+                <li><a href="#t2">Заоблени форми:</a></li>
+                <li><a href="#t3">Неправилни форми:</a></li>
+                <li><a href="#t4">Разширени форми:</a></li>
+            </ul>
+            
+            <li><a href="#text">Обвиване в текст</a></li>
+            
+            <ul>
+                <li><a href="#so">Shape-outside</a></li>
+                <li><a href="#sit">Shape-image-threshold</a></li>
+                <li><a href="#sm">Shape-margin</a></li>
+                <li><a href="#float">Float</a></li>
+                <li><a href="#clear">Clear</a></li>
+            </ul>
+            
+            <li><a href="#img">Форми от изображение</a></li>
+            <li><a href="#sources">Източници</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <section id="introduction">
+            <h2>Въведение</h2>
+            <p>
+                Искате ли да добавите квадрат или правоъгълник към вашата уеб страница? Ето как да направите това и много повече с CSS. Виждали ли сте някога уебсайт с чист CSS, където всеки елемент е завършен чрез CSS? CSS прави повече от просто стилизиране на елементи. CSS формите позволяват на уеб дизайнерите да създават персонализирани пътеки като триъгълник, кръгове, многоъгълници и други. По този начин вече не сте принудени да вмъквате плаващо изображение с прозрачен фон, само за да бъдете разочаровани от правоъгълна кутия около него.
+            </p>
+        </section>       
+        
+        <section id="how">
+            <h2>Kaк да създадем форма със CSS?</h2>
+            <p>
+                За да създадете HTML елемент, който съответства на CSS стиловете, използвани за създаване на форми, можете да използвате всеки HTML елемент, като например div, span, p, ul, li, a и т.н. Ето пример за създаване на кръгова форма с помощта на div елемент: 
+            </p>
+            <pre><code> 
+            &lt;div class="circle"&gt;&lt;/div&gt;
+            </code></pre>
+            <p>
+                След това ще приложите CSS стиловете за кръговия клас, за да създадете кръгла форма, като използвате свойството border-radius.
+            </p>
+            <pre><code>
+            .circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: red;
+            }
+            </code></pre>
+
+            <div id="properties">
+                <h3>Важни свойства</h3>
+                <dl>
+                    <dt>width и height</dt>
+                    <dd>Тези свойства контролират размера на формата.</dd>
+                    <dt>background-color</dt>
+                    <dd>Това свойство задава цвета на фона на фигурата.</dd>
+                    <dt>border</dt>
+                    <dd>Това свойство създава рамка около формата. Можете да зададете ширината, стила и цвета на рамката.</dd>
+                    <dt>position</dt>
+                    <dd>Това свойство контролира разположението на формата на страницата, което ви позволява да я позиционирате спрямо други елементи.</dd>
+                    <dt>transform</dt>
+                    <dd>Това свойство ви позволява да трансформирате формата по различни начини, като например завъртане или изкривяване.</dd>
+                    <dt>box-shadow</dt>
+                    <dd>Това свойство добавя ефект на сянка към формата, което я кара да изглежда сякаш се движи над страницата.</dd>
+                </dl>
+            </div>
+
+            <div id="br">
+                <h3>Border-radius</h3>
+                <p>
+                    Свойството border-radius е важна концепция, която трябва да разберете, преди да стилизирате CSS фигури. Позволява заобляне на ъгли на HTML елементи. Кривата за всеки ъгъл се определя от един или два радиуса, определящи неговата форма - кръг или елипса. Радиусът обхваща целия фон, дори ако елементът няма граници. Свойството border-radius позволява заобляне на всички ъгли на HTML елементи едновременно. Ако зададете две стойности за свойството border-radius, първата стойност ще закръгли горния ляв и долния десен ъгъл, а втората ще закръгли горния десен и долния ляв ъгъл. Можете да използвате px, em, % или други единици за задаване на стойности. Като използвате свойствата border-top-left-radius, border-top-right-radius, border-bottom-left-radius и border-bottom-right-radius, можете да заоблите всеки ъгъл по свой начин. Стойностите, разделени със символа наклонена черта (/), определят хоризонталния и вертикалния радиус.
+                </p>
+            </div>
+
+            <div id="floatar">
+                <h3>Float area</h3>
+                <p>
+                    Областта, използвана за обвиване на съдържание около плаващ елемент. Правилата за плаващо поведение използват страните на плаващата зона, за да определят къде да тече съдържанието. По подразбиране плаващата област е полето за марж на плаващия елемент (обърнете внимание, че това може да бъде различно от зоната за плаване, произведена от стойността margin-box, която включва извивката на border-radius). Свойството shape-outside на тази спецификация може да се използва за дефиниране на произволна, неправоъгълна плаваща площ.
+                </p>
+            </div>
+
+            <div id="wrap">
+                <h3>Wrap</h3>
+                <p>
+                    Тази спецификация използва термина "wrap", за да се отнася до прехвърлянето на съдържание около страните на плаващата област. Съдържанието се обвива около дясната страна на ляво плаваща кутия или съдържанието се обвива около лявата страна на дясно плаваща кутия. Един от резултатите от това обвиване е, че линейните кутии, намиращи се до плаващ елемент, се скъсяват според необходимостта, за да избегнат пресичане с плаващата област.
+                </p>
+            </div>
+        </section>
+        
+        <section id="module">
+            <h2>CSS Shapes Module</h2>
+            <p>
+                CSS Shapes Module е спецификация на W3C, която дефинира CSS свойства и стойности за създаване на неправоъгълни форми в CSS. Модулът предоставя начин за създаване на по-визуално интересни оформления в мрежата, позволявайки на уеб дизайнерите да използват форми, различни от правоъгълници, за елементи на оформление и обвиване на текст. CSS Shapes Module включва свойства като shape-outside и shape-margin, които ви позволяват да обвивате текст около неправоъгълни форми като кръгове, елипси и многоъгълници. Това може да бъде полезно за създаване на визуално интересни оформления, които са уникални. Модулът също така включва свойства за контролиране на потока от съдържание около фигурите и за създаване на сложни форми с помощта на SVG пътеки или CSS форми. Като цяло модулът CSS Shapes предоставя мощен набор от инструменти за създаване на неправоъгълни форми и оформления в мрежата и може да помогне на дизайнерите да създават визуално по-интересни и ангажиращи уебсайтове.
+            </p>
+            <p>
+                CSS Shapes Module Level 1 и Level 2, това са две различни версии на CSS Shapes Module, които дефинират CSS свойства и стойности за създаване на неправоъгълни форми в CSS.
+            </p>
+
+            <div id="level1">
+                <h3>CSS Shapes Level 1</h3>  
+                <p>  
+                    CSS Shapes Level 1 включва свойството shape-outside, което ви позволява да обвивате текст около неправоъгълни форми като кръгове, елипси и многоъгълници. То също така включва свойството shape-margin, което ви позволява да добавите интервал между формата и текста, който я обвива.
+                </p>
+            </div>
+
+            <div id="level2">
+                <h3>CSS Shapes Level 2</h3> 
+                <p>
+                    CSS Shapes Level 2 все още е в процес на разработка и включва допълнителни функции за създаване на сложни форми и контролиране на потока от съдържание около тях. Някои от новите функции включват свойството clip-path, което ви позволява да създавате изрязващи пътеки за елементи, използващи форми, и свойството shape-image-threshold, което ви позволява да зададете прага на прозрачност за пикселите на формата, дефинирани от изображение.
+                </p>
+                    Като цяло модулът CSS Shapes предоставя мощен начин за създаване на визуално интересни и ангажиращи оформления в мрежата.
+                </p>
+            </div>
+        </section>
+        
+        <section id="types">
+            <h2>Видове форми</h2>
+            <p>
+                Можете да създадете голямо разнообразие от форми с помощта на CSS. Ето няколко примера:
+            </p>
+            <div id="type">
+                <div class="types">
+                    <h4><a href="#t1">Основни форми:</a></h4>
+                        <ul>
+                            <li>Circle</li>
+                            <li>Square</li>
+                            <li>Rectangle</li>
+                            <li>Triangle</li>
+                            <li>Trapezoid</li>
+                            <li>Pentagon</li>
+                            <li>Hexagon</li>
+                            <li>Octagon</li>
+                        </ul>
+                </div>
+                <div class="types">
+                    <h4><a href="#t2">Заоблени форми:</a></h4>
+                    <ul>
+                        <li>Rounded rectangle</li>
+                        <li>Ellipse</li>
+                        <li>Stadium shape</li>
+                        <li>Capsule shape</li>
+                        <li>Crescent shape</li>
+                    </ul>
+                </div>
+                <div class="types">
+                    <h4><a href="#t3">Неправилни форми:</a></h4>
+                    <ul>
+                        <li>Heart shape</li>
+                        <li>Star shape</li>
+                        <li>Diamond shape</li>
+                        <li>Arrow shape</li>
+                        <li>Speech bubble shape</li>
+                        <li>Cloud shape</li>
+                    </ul>
+                </div>
+                <div class="types">
+                    <h4><a href="#t4">Разширени форми:</a></h4>
+                    <ul>
+                        <li>Bezier curve shape</li>
+                        <li>Parabola shape</li>
+                        <li>Hyperbola shape</li>
+                        <li>Spiral shape</li>
+                        <li>Wave shape</li>
+                        <li>3D shapes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 id="t1">Основни форми:</h4>
+            <div class="shapes">
+                <h5>Circle</h5>              
+                <div class="shape">
+                    <pre><code>
+            #circle {
+                height: 50px;
+                width: 50px;
+                background-color: #555;
+                border-radius: 50%;
+            }        
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="circle"></div>
+                </div>                   
+            </div> 
+            <p>
+                Кръгът е най-простата CSS форма. Ако зададем border-radius: 50%; свойство към елемент с идентична ширина и височина и ще получим кръг.
+            </p>
+
+            <div class="shapes">
+                <h5>Square</h5>                
+                <div class="shape">
+                    <pre><code>
+            #square {
+                height: 50px;
+                width: 50px;
+                background-color: #555;
+            }      
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="square"></div>
+                </div>               
+            </div>
+            <p>
+                За да направим квадрат, трябва да създадем кутия с идентични свойства на ширина и височина. За правоъгълник трябва да направим ширината по-голяма от височината му.
+            </p>
+
+            <div class="shapes">
+                <h5>Rectangle</h5>                
+                <div class="shape">
+                    <pre><code>
+            #rectangle {
+                height: 50px;
+                width: 100px;
+                background-color: #555;
+              }   
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="rectangle" class="shape"></div>
+                </div>
+            </div>
+
+            <div class="shapes">
+                <h5>Triangle</h5>                
+                <div class="shape">
+                    <pre><code>
+            #triangle {
+                width: 0;
+                height: 0;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                border-bottom: 50px solid #555;
+            }   
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="triangle" class="shape"></div>
+                </div>
+            </div>
+            <p>
+                CSS триъгълниците са полезни за създаване на стрелки, например в избран елемент или вътре в бутон. За да направим триъгълник, трябва да създадем кутия с нулева ширина и височина. Действителната ширина и височина на стрелката се определят от ширината на границата. В стрелка нагоре, например, долната граница е оцветена, докато лявата и дясната са прозрачни, което образува триъгълника. За да направите правоъгълен триъгълник, трябва да оцветим горната или долната част и да оставим дясната или лявата граница прозрачна.
+            </p>
+
+            <h4 id="t2">Заоблени форми:</h4>
+
+            <div class="shapes">
+                <h5>Rounded rectangle</h5>                
+                <div class="shape">
+                    <pre><code>
+            #rounded-rectangle {
+                height: 50px;
+                width: 100px;
+                background-color: #555;
+                border-radius: 10pt;
+            }
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="rounded-rectangle" class="shape"></div>
+                </div>
+            </div>
+
+            <div class="shapes">
+                <h5>Ellipse</h5>                
+                <div class="shape">
+                    <pre><code>
+            #oval {
+                height: 50px;
+                width: 100px;
+                background-color: #555;
+                border-radius: 50%;
+            }
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="oval" class="shape"></div>
+                </div>
+            </div>
+
+            <h4 id="t3">Неправилни форми:</h4>
+            <div class="shapesLong">
+                <h5>Heart shape</h5>                
+                <div class="shape">
+                    <pre><code>
+            #heart {
+                --size: 50px;
+                position: relative;
+                width: var(--size);
+                height: calc(var(--size) * 0.3);
+            }
+                #heart:before,
+                #heart:after {
+                position: absolute;
+                content: "";
+                left: calc(var(--size) * 0.55);
+                top: 0;
+                width: calc(var(--size) * 0.55);
+                height: calc(var(--size) * 0.85);
+                background: #555;
+                border-radius: calc(var(--size) * 0.55) 
+                calc(var(--size) * 0.55) 0 0;
+                transform: rotate(-45deg);
+                transform-origin: 0 100%;
+            }
+                #heart:after {
+                left: 0;
+                transform: rotate(45deg);
+                transform-origin: 100% 100%;
+            }
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="heart" class="shape"></div>
+                </div>
+            </div>
+
+            <div class="shapesLong">
+                <h5>Star shape</h5>                
+                <div class="shape">
+                    <pre><code>
+            #six-pointed-star{
+                --star-color:#555;
+                --sqrt-3:1.73205080757;
+                margin: 0 auto;
+                font-size:2em;
+                width: 0;
+                height: 0;
+                position:relative;
+                border-left: 1em solid transparent;
+                border-right: 1em solid transparent;
+                border-bottom: calc( 1em * var(--sqrt-3) ) 
+                solid var(--star-color);
+            }             
+            #six-pointed-star:after{
+                content:"";
+                position:absolute;
+                width: 0;
+                height: 0;
+                left:-1em;
+                top:calc( 1em * var(--sqrt-3) / 3 );
+                border-left: 1em solid transparent;
+                border-right: 1em solid transparent;
+                border-top: calc( 1em * var(--sqrt-3)  ) 
+                solid var(--star-color);
+            }
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="six-pointed-star" class="shape"></div>
+                </div>
+            </div>
+
+            <div class="shapesLong">
+                <h5>Diamond shape</h5>              
+                <div class="shape">
+                    <pre><code>
+            #cut-diamond {
+                border-style: solid;
+                border-color: transparent transparent 
+                #555 transparent;
+                border-width: 0 25px 25px 25px;
+                height: 0;
+                width: 50px;
+                box-sizing: content-box;
+                position: relative;
+                margin: 20px 0 50px 0;
+            }
+            #cut-diamond:after {
+                content: "";
+                position: absolute;
+                top: 25px;
+                left: -25px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: #555 transparent 
+                transparent transparent;
+                border-width: 70px 50px 0 50px;
+            }      
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="cut-diamond"></div>
+                </div>                   
+            </div>
+
+            <h4 id="t4">Разширени форми:</h4>
+
+            <div class="shapesLongLong">
+                <h5>Spiral shape</h5>              
+                <div class="shape">
+                    <pre><code>
+            #spiral {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 5px solid #555;
+                position: relative;
+            }
+            #spiral::before {
+                content: "";
+                width: 80%;
+                height: 80%;
+                border-radius: 50%;
+                border: 5px solid #555;
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                transform: rotate(45deg) scale(0.9);
+            } 
+            #spiral::after {
+                content: "";
+                width: 60%;
+                height: 60%;
+                border-radius: 50%;
+                border: 5px solid #555;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                transform: rotate(-45deg) scale(0.8);
+            }   
+                    </code></pre>
+                </div>
+                <div class="shape">
+                    <div id="spiral"></div>
+                </div>                   
+            </div>
+        </section>
+        
+        <section id="text">
+            <h2>Обвиване в текст</h2>
+            <p>
+                Има няколко свойства, които можете да използвате, за да форматирте изгледа на форма около текст в CSS:
+            </p>
+
+            <div id="so">
+                <h3>Shape-outside</h3>
+                <p>
+                    Свойството shape-outside контролира как съдържанието ще се увие около ограничителната кутия на плаващия елемент. Обикновено това е, за да може текстът да се преформулира върху фигура като кръг, елипса или многоъгълник.
+                </p>
+                <p>
+                    Важно е да се отбележи, че това свойство засега ще работи само върху плаващи елементи, въпреки че това вероятно ще се промени в бъдеще. Свойството shape-outside също може да се манипулира с преходи или анимации.
+                </p>
+            </div>
+
+            <div id="sit">
+                <h3>Shape-image-threshold</h3>
+                <p>
+                    Свойството CSS shape-image-threshold задава кои пиксели да бъдат включени във формата на изображение, когато shape-outside се използва за определяне на плаващата област на CSS елемент. 
+                </p>
+                <p>
+                    Да кажем, че използваме линеен градиент, за да дефинираме плаващата област на CSS форма. Обикновено бихме го дефинирали като background-image на елемент. Ако преместим този елемент и пуснем малко съдържание до него, градиентът и съдържанието ще стоят едно до друго. Но ако сменим background-image с shape-outside, вече няма да виждаме градиента, но съдържанието се обвива около него, където пикселите в градиента са прозрачни. Но да кажем, че смятаме, че текстът трябва да обгради формата малко по-близо. Това е мястото, където можем да използваме shape-image-threshold. Можем да го използваме, за да коригираме къде съдържанието естествено се увива около прозрачните пиксели, като включим пиксели, които са полупрозрачни.
+                </p>
+            </div>
+
+            <div id="sm">
+                <h3>Shape-margin</h3>
+                <p>
+                    Свойството CSS shape-margin добавя поле към CSS фигури, които са създадени със свойството shape-outside.
+                </p>
+                <p>
+                    Той действа нещо като праг на shape-image-threshold, тъй като променя разстоянието между CSS формата и съдържанието около нея, но вместо да работи със стойности на непрозрачност, за да включи полупрозрачни пиксели в плаващата област, shape-margin - верен на своя име — дефинира пространството между плаващата област на формата на CSS и съдържанието, което плава около нея.
+                </p>
+            </div>
+
+            <div id="float">
+                <h3>Float</h3>
+                <p>
+                    Свойството float в CSS се използва за указване дали даден елемент трябва да бъде плаващ от лявата или дясната страна на неговия контейнер, позволявайки на друго съдържание да тече около него. Когато даден елемент е плаващ, позицията му се регулира така, че да е подравнен с левия или десния край на съдържащия го блок. Съдържанието, което следва плаващия елемент, след това тече около него, вместо да го припокрива. Свойството float може да приеме една от три възможни стойности: ляво, дясно или никаква. Когато е зададено float: left, елементът ще бъде преместен от лявата страна на своя контейнер. Когато е зададено float:right, елементът ще бъде преместен от дясната страна на своя контейнер. Когато е зададено float: none, елементът няма да бъде плаващ и ще се появи в нормалната си позиция в потока на документа.
+                </p>
+            </div>
+
+            <div id="clear">
+                <h3>Clear</h3>
+                <p>
+                    Свойството clear се използва за контролиране на потока от съдържание около плаващ елемент. По подразбиране съдържанието ще тече около плаващ елемент от двете страни. Можете обаче да използвате свойството clear, за да принудите съдържанието да тече само от едната страна на плаващ елемент. Например, за да изчистите съдържание под плаващ елемент, можете да използвате следния CSS:
+                </p>
+                <pre><code>
+            .clearfix {
+                clear: both;
+            }
+                </code></pre>
+            </div>           
+        </section>
+        
+        <section id="img">
+            <h2>Форми от изображение</h2>
+            <p>
+                Друг начин за дефиниране на форми е чрез указване на източник &lt;image&gt;, чийто алфа канал се използва за изчисляване на формата. Формата се изчислява като пътя или пътищата, които обхващат областта(ите), където непрозрачността на определеното изображение е по-голяма от стойността на shape-image-threshold. Липсата на пиксели с алфа стойност, по-голяма от указания праг, води до празна плаваща област, която няма да повлияе на обвиването. Ако shape-image-threshold не е посочен, първоначалната стойност, която трябва да се вземе предвид, е 0,0. Изображението се оразмерява и позиционира така, сякаш е заменен елемент, чиято определена ширина и височина са същите като размера на използваното поле за съдържание на елемента. За формати на анимирани изображения (като GIF) се използва първият кадър от последователността на анимацията.
+            </p>
+        </section>
+        
+        <section id="sources">
+            <h2>Източници</h2>
+            <p>Въведение: 
+                <a href="https://www.makeuseof.com/create-basic-advanced-shapes-with-pure-css/" target="_blank">https://www.makeuseof.com/create-basic-advanced-shapes-with-pure-css/</a>
+            </p>
+
+            <p>Kaк да създадем форма със css?: 
+                <a href="https://sharkcoder.com/visual/shapes" target="_blank">https://sharkcoder.com/visual/shapes</a>
+            </p>
+
+            <p>CSS Shapes Module: 
+                <a href="https://www.w3.org/TR/css-shapes/#intro" target="_blank">https://www.w3.org/TR/css-shapes/#intro</a>
+            </p>   
+
+            <p>Видове форми: 
+                <a href="https://www.w3schools.com/howto/howto_css_shapes.asp" target="_blank">https://www.w3schools.com/howto/howto_css_shapes.asp</a>
+            </p>
+            
+            <p>Обвиване в текст: 
+                <a href="https://css-tricks.com/almanac/properties/s/shape-image-threshold/" target="_blank">https://css-tricks.com/almanac/properties/s/shape-image-threshold/</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
